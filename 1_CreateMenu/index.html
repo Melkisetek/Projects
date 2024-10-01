@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menú Tabla</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <nav></nav>
+    <div class="contenedor">
+      <input type="radio" id="inicio" name="slider" />
+      <input type="radio" id="blog" name="slider" />
+      <input type="radio" id="codigo" name="slider" />
+      <input type="radio" id="ayuda" name="slider" />
+      <input type="radio" id="acerca" name="slider" />
+
+      <nav>
+        <label for="inicio" class="inicio">Inicio</label>
+        <label for="blog" class="blog">Blog</label>
+        <label for="codigo" class="codigo">Código</label>
+        <label for="ayuda" class="ayuda">Ayuda</label>
+        <label for="acerca" class="acerca">Acerca</label>
+      </nav>
     </div>
   </body>
 </html>
