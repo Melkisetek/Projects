@@ -47,3 +47,112 @@ body{
     top: 47px;
     filter: blur(0.5px);
 }
+
+.contenedor nav label{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#blog:checked ~ nav label .inicio,
+#blog:checked ~ nav label .blog,
+#blog:checked ~ nav label .codigo,
+#blog:checked ~ nav label .ayuda,
+#blog:checked ~ nav label .acerca{
+    color: #6f55ca;
+}
+
+input[type ='radio']{
+    display: none;
+}
+
+.contenedor nav .slider{
+    position: absolute;
+    height: 4.5px;
+    background-color: #6f55ca;
+    border-radius:20px;
+    width: 20%;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+    filter: blur(0.4px);
+}
+
+#blog:checked ~ nav .slider{
+    left: 20%;
+}
+
+#codigo:checked ~ nav .slider{
+    left: 40%;
+}
+
+#ayuda:checked ~ nav .slider{
+    left: 60%;
+}
+
+#acerca:checked ~ nav .slider{
+    left: 80%;
+}
+
+#inicio:checked ~ nav .inicio{
+    color: #6f55ca;
+}
+
+#blog:checked ~ nav .blog{
+    color: #6f55ca;
+}
+
+#codigo:checked ~ nav .codigo{
+    color: #6f55ca;
+}
+
+#acerca:checked ~ nav .acerca{
+    color: #6f55ca;
+}
+
+section{
+    filter: blur(0.3px);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contenido{
+    display: none;
+    margin-bottom: 20px;
+}
+
+section .contenido .titulo{
+    font-size: 21px;
+    font-weight: 600;
+    margin: 30px 0 10px 0;
+}
+
+#inicio:checked ~ section .contenido-1{
+    display: block;
+}
+
+#blog:checked ~ section .contenido-2{
+    display: block;
+}
+
+#codigo:checked ~ section .contenido-3{
+    display: block;
+}
+
+#ayuda:checked ~ section .contenido-4{
+    display: block;
+}
+
+#acerca:checked ~ section .contenido-5{
+    display: block;
+}
