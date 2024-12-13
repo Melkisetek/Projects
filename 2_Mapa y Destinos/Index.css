@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+body h1{
+    text-align: center;
+}
+
+#maparaderos{
+    height: 85vh;
+    width: 95%;
+    margin: 0 auto;
+}
