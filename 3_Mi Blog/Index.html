@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="sliderviewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    
+    <div class="contenedor">
+
+      <header>
+        <div class="tituloPrincipal">
+          <h1>El Blog de Melquisedec</h1>
+        </div>
+      </header>
+
+      <input type="radio" id="inicio" name="slider" checked />
+      <input type="radio" id="habilidades" name="slider" />
+      <input type="radio" id="proyectos" name="slider" />
+      <input type="radio" id="mas" name="slider" />
+
+      <nav>
+        <label for="inicio" class="inicio">Inicio</label>
+        <label for="habilidades" class="habilidades">Habilidades</label>
+        <label for="proyectos" class="proyectos">Proyectos</label>
+        <label for="mas" class="mas">Más</label>
+        <div class="slider"></div>
+      </nav>
+
+      <main>
+        <section>
+          <div class="contenido contenido-1">
+            <div class="titulo">Desarrollador Web</div>
+            <img class="miFoto" src="img/Melqui1.jpg" alt="mi foto" width="200">
+            <p>
+              Hola, Mi nombre es Melquisedec Ordoñez un apasionado en el tema de la 
+              tecnología ubicado en Guatemala Chimaltenango, especializado en el desarrollo front-end.
+              <br><br>
+              Estudiante de ingeniería en Sistemas con dos años y medio, donde he desarrollado 
+              habilidades en HTML, CSS y JavaScript 
+              <br/>
+              
+              Me apasiona aprender sobre aplicaciones web, como la inteligencia artificial
+               puede integrarse en el desarrollo web. 
+
+            </p>
+            <div class="contacto">
+              <div class="subtitulo2">Contacto</div>
+              <form class="formulario" action="">
+                <input type="text" placeholder="Nombre" name="nombre" required>
+                <input type="email" placeholder="Correo" name="correo" required>
+                <textarea name="mensaje" placeholder="Mensaje:"></textarea>
+                <input class="boton" type="submit" value="Enviar">
+              </form>
+            </div>
+          </div>
+          <div class="contenido contenido-2">
+            <div class="titulo">Tecnologías y Herramientas</div>
+            <div class="contenedorHabilidades">
+              <img src="" alt="Java" width="300" title="Java" />
+              <img src="" alt="Java" width="300" title="CSS"/>
+            </div>
+          </div>
+          <div class="contenido contenido-3">
+            <div class="titulo">Mis Proyectos</div>
+            <div class="contenedorProyectos">
+              <img src="" alt="Proyecto 1" />
+              <img src="" alt="Proyecto 2" />
+              <img src="" alt="Proyecto 3" />
+              <img src="" alt="Proyecto 4" />
+            </div>
+            <div class="proyectosDestacados">
+              <div class="subtitulo">Destacados</div>
+              <div class="videos">
+                <video width="300" controls>
+                  <source src="" type="video/mp4" />
+                </video>
+                <video width="300" controls>
+                  <source src="" type="video" />
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="contenido contenido-4">
+            <div class="titulo">Más</div>
+            <p>En Proceso...</p>
+          </div>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>

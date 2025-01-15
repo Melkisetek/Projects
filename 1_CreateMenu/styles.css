@@ -59,15 +59,9 @@ body{
     font-size: 17px;
     font-weight: 600;
     transition: all 0.3s ease;
+
 }
 
-#blog:checked ~ nav label .inicio,
-#blog:checked ~ nav label .blog,
-#blog:checked ~ nav label .codigo,
-#blog:checked ~ nav label .ayuda,
-#blog:checked ~ nav label .acerca{
-    color: #6f55ca;
-}
 
 input[type ='radio']{
     display: none;
@@ -84,6 +78,14 @@ input[type ='radio']{
     bottom: 0;
     transition: all 0.3s ease;
     filter: blur(0.4px);
+}
+
+#inicio:checked ~ nav label .inicio,
+#blog:checked ~ nav label .blog,
+#codigo:checked ~ nav label .codigo,
+#ayuda:checked ~ nav label .ayuda,
+#acerca:checked ~ nav label .acerca{
+    color: #6f55ca;
 }
 
 #blog:checked ~ nav .slider{
@@ -114,9 +116,15 @@ input[type ='radio']{
     color: #6f55ca;
 }
 
+#ayuda:checked ~ nav .ayuda{
+    color: #6f55ca;
+}
+
 #acerca:checked ~ nav .acerca{
     color: #6f55ca;
 }
+
+
 
 section{
     filter: blur(0.3px);
