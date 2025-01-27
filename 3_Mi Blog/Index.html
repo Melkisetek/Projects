@@ -7,20 +7,19 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Mi Blog</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="styles/estilos.css" />
+    <link rel="stylesheet" href="styles/habilidades.css" />
   </head>
   <body>
-    
     <div class="contenedor">
-
       <header>
         <div class="tituloPrincipal">
           <h1>El Blog de Melquisedec</h1>
         </div>
       </header>
 
-      <input type="radio" id="inicio" name="slider" checked />
-      <input type="radio" id="habilidades" name="slider" />
+      <input type="radio" id="inicio" name="slider" />
+      <input type="radio" id="habilidades" name="slider" checked />
       <input type="radio" id="proyectos" name="slider" />
       <input type="radio" id="mas" name="slider" />
 
@@ -35,35 +34,265 @@
       <main>
         <section>
           <div class="contenido contenido-1">
+            <img
+              class="miFoto"
+              src="img/Melqui1.jpg"
+              alt="mi foto"
+              width="160"
+            />
             <div class="titulo">Desarrollador Web</div>
-            <img class="miFoto" src="img/Melqui1.jpg" alt="mi foto" width="200">
             <p>
-              Hola, Mi nombre es Melquisedec Ordoñez un apasionado en el tema de la 
-              tecnología ubicado en Guatemala Chimaltenango, especializado en el desarrollo front-end.
-              <br><br>
-              Estudiante de ingeniería en Sistemas con dos años y medio, donde he desarrollado 
-              habilidades en HTML, CSS y JavaScript 
-              <br/>
-              
-              Me apasiona aprender sobre aplicaciones web, como la inteligencia artificial
-               puede integrarse en el desarrollo web. 
+              Hola, Mi nombre es Melquisedec Ordoñez un apasionado en el tema de
+              la tecnología ubicado en Guatemala Chimaltenango, especializado en
+              el desarrollo front-end.
+              <br /><br />
+              Estudiante de ingeniería en Sistemas con dos años y medio, donde
+              he desarrollado habilidades en HTML, CSS y JavaScript
+              <br />
 
+              Me apasiona aprender sobre aplicaciones web, como la inteligencia
+              artificial puede integrarse en el desarrollo web.
             </p>
             <div class="contacto">
               <div class="subtitulo2">Contacto</div>
-              <form class="formulario" action="">
-                <input type="text" placeholder="Nombre" name="nombre" required>
-                <input type="email" placeholder="Correo" name="correo" required>
-                <textarea name="mensaje" placeholder="Mensaje:"></textarea>
-                <input class="boton" type="submit" value="Enviar">
+              <form
+                onclick="deshabilitarFormulario()"
+                id="formulario"
+                class="formulario"
+                action="php/formulario.php"
+                method="POST"
+              >
+                <input
+                  type="text"
+                  id="nombre"
+                  placeholder="Nombre"
+                  name="nombre"
+                  required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Correo"
+                  name="email"
+                  required
+                />
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  placeholder="Mensaje:"
+                  required
+                ></textarea>
+                <input id="miboton" class="boton" type="submit" value="Enviar" />
               </form>
             </div>
           </div>
           <div class="contenido contenido-2">
-            <div class="titulo">Tecnologías y Herramientas</div>
+            <div class="titulo tecnologiasHerramientas">Tecnologías y Herramientas</div>
             <div class="contenedorHabilidades">
-              <img src="" alt="Java" width="300" title="Java" />
-              <img src="" alt="Java" width="300" title="CSS"/>
+              <div class="subtitulo lenguajes vineta">Lenguajes:</div>
+              <div class="img">
+                <div class="thumb">
+                  <img
+                    src="img/js.png"
+                    alt="JavaScript"
+                    width="60"
+                    title="JavaScript"
+                  />
+                  <div class="descripcion">
+                    <p class="nombre">JavaScript</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img src="img/java.png" alt="Java" width="70" title="Java" />
+                  <div class="descripcion">
+                    <p class="nombre">Java</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/piton.png"
+                    alt="Python"
+                    width="50"
+                    title="Python"
+                  />
+                  <div class="descripcion">
+                    <p class="nombre">Python</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="linea"></div>
+              <div class="subtitulo development vineta">
+                Front-End Development:
+              </div>
+              <div class="img">
+                <div class="thumb">
+                  <img src="img/html.png" alt="html" width="50" title="HTML" />
+                  <div class="descripcion">
+                    <p class="nombre">HTML5</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img src="img/css.png" alt="CSS" width="50" title="CSS" />
+                  <div class="descripcion">
+                    <p class="nombre">CSS</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img src="img/SASS.png" alt="SASS" width="50" title="SASS" />
+                  <div class="descripcion">
+                    <p class="nombre">SASS</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/js.png"
+                    alt="JavaScript"
+                    width="50"
+                    title="JavaScript"
+                  />
+                  <div class="descripcion">
+                    <p class="nombre">JavaScript</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="linea"></div>
+              <div class="subtitulo softwareHerramientas vineta">
+                Softwares y Herramientas:
+              </div>
+              <div class="img">
+                <div class="thumb">
+                  <img
+                    src="img/visual-basico.png"
+                    alt="Visual Studio Code"
+                    width="50"
+                    title="VSCode"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">
+                      Visual Studio Code
+                    </p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/netbeans.png"
+                    alt="NetBeans"
+                    width="50"
+                    title="Apache NetBeans"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">
+                      Apache NetBeans
+                    </p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/github.png"
+                    alt="GitHub"
+                    width="50"
+                    title="GitHub"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">GitHub</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img src="img/git.png" alt="Git" width="50" title="Git" />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">Git</p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/mockups_ico.png"
+                    alt="Balsamiq Mockups"
+                    width="50"
+                    title="Balsamiq Mockups"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">
+                      Balsamiq Mockups
+                    </p>
+                  </div>
+                </div>
+                <div class="thumb">
+                  <img
+                    src="img/google.png"
+                    alt="Google"
+                    width="50"
+                    title="Google"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">Google</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="linea"></div>
+              <div class="subtitulo hosting vineta">Cloud Hosting:</div>
+              <div class="img">
+                <div class="thumb">
+                  <img
+                    src="img/github pages.png"
+                    alt="GitHub Pages"
+                    width="50"
+                    title="GitHub Pages"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">
+                      GitHub Pages
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="linea"></div>
+              <div class="subtitulo dataBase vineta">DataBase:</div>
+              <div class="img">
+                <div class="thumb">
+                  <img
+                    src="img/mysql.png"
+                    alt="MySql"
+                    width="50"
+                    title="MySql"
+                  />
+                  <div class="descripcion">
+                    <p style="text-align: center" class="nombre">MySql</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="linea"></div>
+              <div class="subtitulo extras vineta">Extras:</div>
+              <div class="img">
+                <div class="thumb" style="margin: 30px;">
+                  <img
+                    src="https://img.shields.io/badge/Terminal-%23054020?style=for-the-badge&logo=gnu-bash&logoColor=white"
+                    alt="Terminal"
+                    width="150"
+                    title="Terminal"
+                  />
+                </div>
+                <div class="thumb" style="margin: 30px;">
+                  <img
+                    src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white"
+                    alt="Markdown"
+                    width="150"
+                    title="Markdown"
+                  />
+                </div>
+                <div class="thumb" style="margin: 30px;">
+                  <img 
+                  src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black"
+                  alt="Adobe Photoshop"
+                  width="160"
+                  title="Photoshop: uno de los grandes programas para la edicción"
+                />
+                </div>
+              </div>
             </div>
           </div>
           <div class="contenido contenido-3">
@@ -88,12 +317,42 @@
           </div>
           <div class="contenido contenido-4">
             <div class="titulo">Más</div>
-            <p>En Proceso...</p>
+            <p style="text-align: center">En Proceso...</p>
           </div>
         </section>
       </main>
 
-      <footer></footer>
+      <footer>
+        <div class="redesSociales">
+          <div class="subtitulo3">Redes Sociales</div>
+          <div class="enlaces">
+            <a
+              href="https://www.facebook.com/guidman.melordonez"
+              class="facebook"
+              target="_blank"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a
+              href="https://github.com/Melkisetek/Melkisetek"
+              class="gitHub"
+              target="_blank"
+            >
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
+
+    <script
+      type="module"
+      src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js "
+    ></script>
+    <script
+      nomodule
+      src=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js "
+    ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

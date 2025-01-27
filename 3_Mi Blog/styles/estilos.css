@@ -42,7 +42,7 @@ body{
 }
 
 .contenedor{
-    width: 80%;
+    width: 90%;    
     max-width: 1000px;
     background: #fff;
     text-align: center;
@@ -146,6 +146,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 main section .contenido{
@@ -164,6 +165,13 @@ section .contenido .subtitulo{
     font-size: 20px;
     font-weight: 400;
     margin:20px 0 5px 0;
+}
+
+.contenido .miFoto{
+    margin-top: 50px;
+    vertical-align: top;
+    border-radius: 50%;
+    border: 5px solid rgba(225, 225, 225, 0.2);
 }
 
 /*Mostrar contenido*/
@@ -233,13 +241,15 @@ main section p{
 }
 
 .contacto .formulario textarea{
-    width:50%;
+    width:100%;
     height: 100px;
     min-width: 100%;
     max-width: 100%;
     min-height: 100px;
     max-height: 250px;
     margin-bottom: 15px;
+    resize: vertical; /*Solo en vertical*/
+    padding: 5px 16px;
 }
 
 .contacto .formulario .boton{
@@ -255,3 +265,164 @@ main section p{
 .contacto .formulario .boton:hover{
    background:  #387bea;
 }
+
+/*--habilidades--*/
+section{
+    width: 100%;
+   
+}
+.contenido-2{
+    position: relative;
+    width: 92%;
+    left:4%;
+    background: #e9edc9;
+    
+    
+}
+
+.contenido-2 .tecnologiasHerramientas{
+    padding: 40px 0 0 0;
+}
+
+.contenido-2 .linea{
+    width:90%;
+    display: inline-block;
+    height: 1.5px;
+    background-color: #ff8000;
+    z-index: 1;
+    filter: blur(0.5px);
+    
+}
+
+.contenido-2 .vineta::before{
+    content: "•"; /* El carácter de la viñeta */  
+    position: absolute; /* Posiciona la viñeta */  
+    left: 50px; /* Alinear a la izquierda */  
+    color: black; /* Color de la viñeta */  
+    font-size: 55px; /* Tamaño de la viñeta */  
+    line-height:0.5; /* Alinear verticalmente */ 
+
+}
+
+.contenido-2 .lenguajes{
+    position: relative;
+    text-align: left;
+    padding: 5px 0 0 80px;
+    
+}
+
+.contenido-2 .softwareHerramientas{
+    position: relative;
+    text-align: left;
+    padding: 0px 0 0 80px;
+    bottom: 22px;
+}
+
+.contenido-2 .development{
+    position: relative;
+    text-align: left;
+    padding: 0px 0 0 80px;
+    bottom: 22px;
+}
+
+.contenido-2 .hosting{
+    position: relative;
+    text-align: left;
+    padding: 0px 0 0 80px;
+    bottom: 22px;
+}
+
+.contenido-2 .dataBase{
+    position: relative;
+    text-align: left;
+    padding: 0px 0 0 80px;
+    bottom: 22px;
+}
+
+.contenido-2 .extras{
+    position: relative;
+    text-align: left;
+    padding: 0px 0 0 80px;
+    bottom: 22px;
+}
+
+/*imagenes*/
+.contenido-2 .img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contenido-2 .img .thumb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin: 12px;
+   /* border: 1px solid #17202A;*/
+  
+    
+
+}
+
+
+.contenido-2 .img .descripcion{
+    font-weight: 200;
+    color: #2867a1;
+}
+
+.contenido-2 .img3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*---------------------footer---------------------*/
+footer{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+
+
+footer .redesSociales{
+    height:140px ;
+    /*padding: 15px 0;*/
+    background: #30323d;
+}
+
+footer .redesSociales .subtitulo3{
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 21px;
+    justify-content: center;
+    
+}
+
+footer .redesSociales .enlaces{
+    display: flex;
+    justify-content: center;
+}
+
+footer .redesSociales .enlaces a{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    display: block;
+    border-radius: 3px;
+    margin: 0 20px;
+}
+
+footer .redesSociales .facebook:hover{background: #1877f2;}
+footer .redesSociales .gitHub:hover{background: #17202A;}
+
