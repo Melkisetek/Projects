@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Tareas</title>
+    <link rel="stylesheet" href="styles/estilos.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="titulo_principal">Lista De Tareas</div>
+      <div class="menuDesplegable">
+        <select class="estadoTareas" id="estadoTareas">
+          <option value="noCompletada" selected>No Completadas</option>
+          <option value="completadas">Completadas</option>
+        </select>
+      </div>
+      <div class="temaInterfaz">
+        <input type="radio" name="slider" id="claro" checked />
+        <input type="radio" name="slider" id="oscuro" />
+        <nav>
+          <label for="claro" class="claro">Claro</label>
+          <label for="oscuro" class="oscuro">Oscuro</label>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
