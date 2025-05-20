@@ -1,79 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", serif;
-    font-weight:200;
-   
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+  font-weight: 200;
 }
 
-.header{
-    background:linear-gradient(to bottom, rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%);
-    max-width: 90%;
-    height:30vh;
-    margin: auto;
-    position: relative;
+/*---------header--------*/
+
+.header {
+  /*    background:linear-gradient(to bottom, rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%);
+*/
+
+  background-color: #3f51b5;
+  box-shadow: 0px 4px 20px 1px rgba(63, 81, 181, 1);
+  border-radius: 0 0 5px 5px;
+  width: 90%;
+  height: 30vh;
+  margin: auto;
+  position: sticky;
+  top: 0; /*El menú se pegará en la parte superior cuando se desplace*/
+  z-index: 999;
 }
 
-.header .titulo_principal{
-    color: #fff;
-    padding: 12px 0 0 0;
-    font-size: 30px;
-    position: absolute;
-    font-weight: 400;
-    /*forma de centrar*/
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline;
+.header .titulo_principal {
+  color: #fff;
+  padding: 12px 0 0 0;
+  font-size: 30px;
+  position: absolute;
+  font-weight: 400;
+  /*forma de centrar*/
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline;
 }
 
-.header .menuDesplegable{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+.header .menuDesplegable {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
-.menuDesplegable select{
-    font-size: 22px;
-    text-align: center;
-    font-family: "Open Sans", serif;
+.menuDesplegable select {
+  font-size: 22px;
+  text-align: center;
+  font-family: "Open Sans", serif;
 }
 /*tema*/
-.temaInterfaz nav{
-    background: #a41623;
-    display: inline;
-    float: right;
-    margin: 12px 25px;
-    
+.temaInterfaz nav {
+  background: #a41623;
+  border-radius: 20px;
+  display: inline;
+  float: right;
+  margin: 12px 25px;
 }
 
-.temaInterfaz nav label{
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    display: inline-block;
-    font-weight: 400;
+.temaInterfaz nav label {
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  display: inline-block;
+  font-weight: 400;
 }
 
-.temaInterfaz nav .claro:hover{
-    background: #9e9e9e;
-    color: #fff;
+.temaInterfaz nav .claro:hover {
+  background: #9e9e9e;
+  color: #fff;
+  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
 }
 
-.temaInterfaz nav .oscuro:hover{
-    background: #343a40;
-    color: #fff;
+.temaInterfaz nav .oscuro:hover {
+  background: #343a40;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
 }
-
-
 
 /*Ocultar btn radio*/
-input[type="radio"]{
-    display: none;
+input[type="radio"] {
+  display: none;
+}
+
+/*-----main------*/
+main {
+  width: 90%;
+  /*  background: #f8f8f8;*/
+  height: 100vh;
+  margin: auto;
+}
+main form {
+  display: flex;
+  justify-content: center;
+}
+
+.agregar .linea {
+  border-top: 2px solid #f4b115;
+  opacity: 0.6;
+  margin: 15px 0 15px 0;
+}
+
+.agregar .elemento_eliminar--btn {
+  font-size: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle; /*es útil para alinear elementos en línea o inline-block verticalmente en relación con el texto u otros elementos en la misma línea*/
+  line-height: 1;
+}
+
+/*form*/
+.agregar > input {
+  font-size: 25px;
+  text-align: center;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+}
+
+.agregar .categorias {
+  font-size: 26px;
+}
+
+.agregar .btn_agregar {
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*pop-up*/
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 20px 2px rgba(120, 40, 120, 1);
+  z-index: 1000;
+  border-radius: 5px;
+  width: 60%;
+  height: 70vh;
+}
+
+/* Estilos para el fondo oscuro */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.popup .formulario input[type="text"],
+.popup .formulario textarea {
+  border: 2px solid #cecece;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 20px;
+  color: #3b3b3b;
+}
+
+.popup .formulario input[type="text"] {
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  border: none;
+}
+
+.popup .formulario textarea {
+  width: 100%;
+  height: 40vh;
+  min-width: 100%;
+  min-height: 40vh;
+  max-height: 45vh;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+.popup .formulario .cerrar {
+  background: none;
+  color: #000;
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  left: 98%;
+  bottom: 95%;
+}
+
+.popup .formulario .cerrar:hover{
+  color: #e60013;
+}
+
+.popup .formulario .guardar_btn{
+  background:#3895ea;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.popup .formulario .guardar_btn:hover{
+  background-color:  #387bea;
 }

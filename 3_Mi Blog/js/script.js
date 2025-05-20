@@ -11,3 +11,14 @@ function deshabilitarFormulario(){
     alert('¡Hola! Esta acción no se encuentra disponible ahora.')
 }
 
+//menu desplegable
+document.querySelector('.menu').addEventListener('click', function() {
+    var nav = document.querySelector('.contenedor nav');
+    if (nav.style.display === 'block') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
+    }
+   
+});
+

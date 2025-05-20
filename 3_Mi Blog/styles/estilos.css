@@ -54,6 +54,10 @@ body{
     
 }
 
+/*icono menu*/
+.contenedor nav .menu{
+    display: none;
+}
 
 
 
@@ -67,8 +71,8 @@ body{
 
     
 }
-
-.contenedor nav::after{
+/*after*/
+.contenedor nav .line{
     content: "";
     background: #cfcfcf;
     width: 100%;
@@ -427,4 +431,156 @@ footer .redesSociales .facebook:hover{background: #1877f2;}
 footer .redesSociales .gitHub:hover{background: #17202A;}
 footer .redesSociales .deviantart:hover{background: #05CC46;}
 footer .redesSociales .instagram:hover{background:  #e1306c;}
+
+/* Diseño Responsivo */
+@media screen and (max-width: 720px) {
+    header .tituloPrincipal {
+        display: none;
+    }
+
+    .contenedor nav {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .contenedor nav .menu {
+        display: inline;
+        cursor: pointer;
+        font-size: 55px;
+        color: #ff8000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: none;
+        border-style: none;
+        z-index: 100;
+    }
+
+    .contenedor nav label {
+        display: none;
+    }
+
+    .contenedor nav .line {
+        display: none;
+    }
+
+    .contenedor nav .slider {
+        display: none;
+    }
+
+    .contenedor nav input[type="radio"]:checked ~ label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+/*main*/
+@media screen and (max-width: 720px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section .contenido .titulo {
+        font-size: 18px;
+    }
+
+    section .contenido .subtitulo {
+        font-size: 16px;
+    }
+
+    .contenido .miFoto {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .contenido-2 {
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+
+    .contenido-2 .img .thumb {
+        width: 45%;
+        margin: 5px;
+    }
+
+    .contenido-2 .lenguajes,
+    .contenido-2 .softwareHerramientas,
+    .contenido-2 .development,
+    .contenido-2 .hosting,
+    .contenido-2 .dataBase,
+    .contenido-2 .extras {
+        padding-left: 20px;
+    }
+}
+
+/* formularios*/
+@media screen and (max-width: 720px) {
+    .contacto .formulario input[type="text"],
+    .contacto .formulario input[type="email"] {
+        width: 100%;
+    }
+
+    .contacto .formulario textarea {
+        width: 100%;
+    }
+}
+
+/*footer*/
+@media screen and (max-width: 720px) {
+    footer .redesSociales .enlaces a {
+        font-size: 30px;
+        margin: 0 10px;
+    }
+}
+
+/*ajustes generales*/
+@media screen and (max-width: 720px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/*ajustar imagenes*/
+@media screen and (max-width: 720px) {
+    .contenido-2 .img .thumb {
+        width: 45%;
+        margin: 5px;
+    }
+}
+
+/*texto*/
+@media screen and (max-width: 720px) {
+    body {
+        font-size: 14px;
+    }
+
+    section .contenido .titulo {
+        font-size: 18px;
+    }
+
+    section .contenido .subtitulo {
+        font-size: 16px;
+    }
+}
+/*asegurar header*/
+@media screen and (max-width: 720px) {
+    header {
+        padding: 10px;
+    }
+
+    .tituloPrincipal {
+        font-size: 16px;
+    }
+}
 
