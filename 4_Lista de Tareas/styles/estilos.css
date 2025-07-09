@@ -98,6 +98,11 @@ main form {
   justify-content: center;
 }
 
+main .agregar{
+  width: 90%;
+  margin: auto;
+}
+
 .agregar .linea {
   border-top: 2px solid #f4b115;
   opacity: 0.6;
@@ -114,13 +119,17 @@ main form {
   line-height: 1;
 }
 
+.agregar .elemento_eliminar--btn:hover {
+  color: #e60013;
+}
+
 /*form*/
 .agregar > input {
   font-size: 25px;
   text-align: center;
 }
 
-.check {
+.agregar .check {
   width: 20px;
   height: 20px;
 }
@@ -129,11 +138,28 @@ main form {
   font-size: 26px;
 }
 
+.agregar .elemento_modificar--btn {
+  font-size: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle; /*es útil para alinear elementos en línea o inline-block verticalmente en relación con el texto u otros elementos en la misma línea*/
+}
+
+.agregar .elemento_modificar--btn:hover {
+  color: #3895ea;
+}
+
+
 .agregar .btn_agregar {
   font-size: 40px;
   background: none;
   border: none;
   cursor: pointer;
+}
+.agregar .btn_agregar:hover {
+  color: #6c3483;
 }
 
 /*pop-up*/
