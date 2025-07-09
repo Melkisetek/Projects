@@ -55,7 +55,7 @@ body{
 }
 
 /*icono menu*/
-.contenedor nav .menu{
+.contenedor .menuIco .menu{
     display: none;
 }
 
@@ -433,19 +433,22 @@ footer .redesSociales .deviantart:hover{background: #05CC46;}
 footer .redesSociales .instagram:hover{background:  #e1306c;}
 
 /* Diseño Responsivo */
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     header .tituloPrincipal {
         display: none;
     }
 
     .contenedor nav {
+        display: none;
         height: auto;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
     }
 
-    .contenedor nav .menu {
+    .contenedor .menuIco .menu {
+        margin-right:30px;
+        margin-top: 30px;
         display: inline;
         cursor: pointer;
         font-size: 55px;
@@ -458,9 +461,9 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
         z-index: 100;
     }
 
-    .contenedor nav label {
+    /* .contenedor nav label {
         display: none;
-    }
+    } */
 
     .contenedor nav .line {
         display: none;
@@ -479,7 +482,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /*main*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     main {
         width: 100%;
         padding: 10px;
@@ -494,7 +497,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
     }
 
     .contenido .miFoto {
-        width: 80%;
+        width: 35%;
         margin-top: 20px;
     }
 
@@ -520,7 +523,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /* formularios*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     .contacto .formulario input[type="text"],
     .contacto .formulario input[type="email"] {
         width: 100%;
@@ -532,7 +535,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /*footer*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     footer .redesSociales .enlaces a {
         font-size: 30px;
         margin: 0 10px;
@@ -540,7 +543,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /*ajustes generales*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     body {
         font-size: 14px;
     }
@@ -552,7 +555,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /*ajustar imagenes*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     .contenido-2 .img .thumb {
         width: 45%;
         margin: 5px;
@@ -560,7 +563,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
 }
 
 /*texto*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     body {
         font-size: 14px;
     }
@@ -574,7 +577,7 @@ footer .redesSociales .instagram:hover{background:  #e1306c;}
     }
 }
 /*asegurar header*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     header {
         padding: 10px;
     }
