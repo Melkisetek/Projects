@@ -1,30 +1,25 @@
-
-export class Dato {
-    protected _titulo!: string;
-    protected _descripcion!: string;
-    
-
-    constructor(titulo: string, descripcion: string) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dato = void 0;
+class Dato {
+    constructor(titulo, descripcion) {
         this._titulo = titulo;
         this._descripcion = descripcion;
     }
-
-    get titulo(): string {
+    get titulo() {
         return this._titulo;
     }
-    set titulo(value: string) {
+    set titulo(value) {
         this._titulo = value;
     }
-
-    get descripcion(): string {
+    get descripcion() {
         return this._descripcion;
     }
-    set descripcion(value: string) {
+    set descripcion(value) {
         this._descripcion = value;
     }
-
-    toString(): string {
+    toString() {
         return `Título: ${this._titulo}, Descripción: ${this._descripcion}`;
     }
 }
-
+exports.Dato = Dato;

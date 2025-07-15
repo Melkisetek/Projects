@@ -1,0 +1,65 @@
+# -----------------------------------
+# Node.js - Ignorar archivos comunes
+# -----------------------------------
+
+# node_modules contiene todas las dependencias instaladas con npm/yarn/pnpm.
+# No es necesario subir esto a Git, se puede regenerar con `npm install`.
+**/node_modules/
+
+# package-lock.json o yarn.lock es importante NO ignorarlo si estás en producción.
+# Aquí lo ignoramos solo si quieres evitar conflictos (útil en desarrollo personal).
+# Descomenta la línea si deseas ignorarlo (opcional):
+# package-lock.json
+
+# logs de errores de npm o del sistema
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo y entornos de desarrollo (cosas del demonio que sobran 👻)
+.DS_Store         # macOS
+Thumbs.db         # Windows
+ehthumbs.db       # Windows
+
+# Archivos temporales o cachés generados por el editor/IDE
+*.swp             # archivos swap (Vim)
+*.swo
+*.bak             # respaldos temporales
+*.tmp             # temporales
+
+# VSCode configs personales del desarrollador (no afectan al proyecto)
+.vscode/
+
+# Archivos de pruebas o cobertura de tests
+coverage/         # generado por herramientas como Jest
+.nyc_output/      # salida de cobertura de NYC
+
+# Archivos de compilación/transpilación
+dist/             # salida de producción (por ejemplo con Babel, TypeScript, etc.)
+**/build/            # alternativa a dist/ si usas otra estructura
+
+# Archivos generados por bundlers como Webpack, Vite, Rollup, etc.
+.cache/
+.next/            # si usas Next.js
+out/              # salida de Next.js en modo static export
+
+# Archivos de entorno con datos sensibles como claves API, contraseñas, etc.
+.env
+.env.*            # incluye .env.development, .env.production, etc.
+
+# Archivos de lock temporales
+*.lock
+
+# Archivos de bases de datos o SQLite locales (si los usas)
+*.sqlite
+*.db
+
+# Archivos de informes o errores de crash
+*.log
+
+# Ignora los archivos de TypeScript si estás usando solo JS
+*.tsbuildinfo     # info de compilación de TS
+
+# Personalización local de ESLint o Prettier (opcional)
+.eslintcache
+

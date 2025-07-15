@@ -14,6 +14,7 @@
         <select class="estadoTareas" id="estadoTareas">
           <option value="noCompletada" selected>No Completadas</option>
           <option value="completadas">Completadas</option>
+          <option value="todas">Todas</option>
         </select>
       </div>
       <div class="temaInterfaz">
@@ -27,45 +28,16 @@
     </div>
 
     <main>
-      <form action="" onsubmit="return false;">
-        <div class="agregar">
-          <button class="btn_agregar" onclick="abrirPopup()" title="Agregar">
-            <ion-icon name="add-circle-outline"></ion-icon>
-          </button>
-          <div class="linea"></div>
-          <button class="elemento_eliminar--btn">
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-          <input
-            rel="nofollow"
-            type="text"
-            name="titulo"
-            id="titulo"
-            placeholder="título"
-          />
-          <input
-            type="checkbox"
-            name="check"
-            class="check"
-            id="check"
-            title="Marcar Completada"
-          />
-          <select name="" id="categoria" class="categorias">
-            <option value="" disabled selected>Categoría</option>
-            <option value="">Tarea</option>
-            <option value="">Cocina</option>
-            <option value="">Escuela</option>
-          </select>
-          <input type="datetime-local" name="" id="fechaHora" />
-          <button class="elemento_modificar--btn" title="Modificar">
-            <ion-icon name="create-outline"></ion-icon>
-          </button>
-          <br />
-          <div class="linea"></div>
-        </div>
-      </form>
-      <!-- Nuevo contenedor para mostrar la lista de tareas-->
-      <div class="agregar" id="lista-tareas"></div>
+      <div class="agregar">
+        <button class="btn_agregar" onclick="abrirPopup()" title="Agregar">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </button>
+        <div class="linea"></div>
+      </div>
+      
+      <!-- Contenedor para mostrar la lista de tareas-->
+      <div id="lista-tareas"></div>
+      
       <section>
         <div class="popup" id="popup">
           <form
@@ -80,13 +52,14 @@
               name=""
               id="titulo2"
               placeholder="Título"
+              required
             />
             <div class="linea"></div>
-            <textarea name="" id="texto" cols="30" rows="10"></textarea>
+            <textarea name="" id="texto" cols="30" rows="10" placeholder="Descripción" required></textarea>
             <button class="guardar_btn" id="guardar_btn" title="Guadar">
               Guardar
             </button>
-            <button class="cerrar" onclick="cerrarPopup()" title="Cerrar">
+            <button type="button" class="cerrar" onclick="cerrarPopup()" title="Cerrar">
               <ion-icon name="close-outline"></ion-icon>
             </button>
           </form>
@@ -96,6 +69,7 @@
       </section>
     </main>
 
+    <!-- Scripts para íconos -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -104,9 +78,43 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    
+    <!-- Scripts de la aplicación -->
     <script src="js/pop-up.js"></script>
     <script src="js/Dato.js"></script>
     <script src="js/listado_apuntes.js"></script>
     <script src="js/app.js"></script>
+    
+    <!-- Script para cambiar el tema -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const claro = document.getElementById('claro');
+        const oscuro = document.getElementById('oscuro');
+        
+        // Cargar tema guardado
+        const temaGuardado = localStorage.getItem('tema');
+        if (temaGuardado === 'oscuro') {
+          document.body.classList.add('tema-oscuro');
+          oscuro.checked = true;
+        } else {
+          claro.checked = true;
+        }
+        
+        // Cambiar tema
+        claro.addEventListener('change', function() {
+          if (this.checked) {
+            document.body.classList.remove('tema-oscuro');
+            localStorage.setItem('tema', 'claro');
+          }
+        });
+        
+        oscuro.addEventListener('change', function() {
+          if (this.checked) {
+            document.body.classList.add('tema-oscuro');
+            localStorage.setItem('tema', 'oscuro');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
